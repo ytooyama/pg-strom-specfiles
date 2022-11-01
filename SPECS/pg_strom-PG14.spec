@@ -71,7 +71,7 @@ fi
 %endif
 
 %changelog
-* Tue Nov 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.coms> - 3.4b1
+* Tue Nov 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.com> - 3.4b1
 - test relase
 
 * Sun Nov 28 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.2-2
