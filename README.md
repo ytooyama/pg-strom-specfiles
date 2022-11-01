@@ -3,7 +3,7 @@
 ## 使い方
 
 [PG-Strom](https://github.com/heterodb/pg-strom) のrpmパッケージ作るためのspecファイルを置いています。
-公式からソースのzipファイルをダウンロードしてそれぞれ配置して、rpmbuildコマンドを実行してsrpmやrpmパッケージを作ってください。
+公式からソースのzipファイルをダウンロードしてそれぞれ配置して、rpmbuildコマンドを実行してsrpmやrpmパッケージを作ってください。RHEL 8.6で確認済み。
 
 specファイルは必要に応じて編集してください。
 
