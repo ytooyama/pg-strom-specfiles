@@ -1,4 +1,4 @@
-%define PGSQL_PKGVER	%(echo 13 | sed 's/[^0-9]//g')
+%define PGSQL_PKGVER	%(echo 15 | sed 's/[^0-9]//g')
 
 Name: pg_strom-PG%{PGSQL_PKGVER}
 Version: 3.4
@@ -18,7 +18,7 @@ Obsoletes: nvme_strom < 2.0
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 AutoReqProv: no
 
-%define __pg_config     /usr/pgsql-13/bin/pg_config
+%define __pg_config     /usr/pgsql-14/bin/pg_config
 %define __pkglibdir     %(%{__pg_config} --pkglibdir)
 %define __pkgbindir     %(%{__pg_config} --bindir)
 %define __pkgsharedir   %(%{__pg_config} --sharedir)

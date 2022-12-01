@@ -2,12 +2,12 @@
 
 Name: pg_strom-PG%{PGSQL_PKGVER}
 Version: 3.4
-Release: b1%{?dist}
+Release: build1%{?dist}
 Summary: PG-Strom extension module for PostgreSQL
 Group: Applications/Databases
 License: PostgreSQL
 URL: https://github.com/heterodb/pg-strom
-Source0: pg-strom-master.zip
+Source0: pg-strom-3.4.zip
 Source1: systemd-pg_strom.conf
 BuildRequires: postgresql%{PGSQL_PKGVER}
 BuildRequires: postgresql%{PGSQL_PKGVER}-devel
@@ -28,10 +28,10 @@ AutoReqProv: no
 %description
 PG-Strom is an extension for PostgreSQL, to accelerate large data processing
 queries using the capability of GPU and NVME devices.
-This package is built from master (commit:cf0a106) of the Git repo.
+This package is built from v3.4 of the Git repo.
 
 %prep
-%setup -q -n pg-strom-master
+%setup -q -n pg-strom-3.4
 
 %build
 rm -rf %{buildroot}
@@ -71,11 +71,17 @@ fi
 %endif
 
 %changelog
-* Tue Nov 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.com> - 3.4b1
+* Thu Dec 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.com> - 3.4-build1
 - test relase
 
-* Sun Nov 28 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.2-2
+* Tue Nov 17 2022 KaiGai Kohei <kaigai@heterodb.com> - 3.4
+- PostgreSQL 14 and 15 supported
+- PostgreSQL 11 is deprecated
+- And Various bug fixes
+
+* Sat Dec 11 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.3-2
 - Rebuild for CUDA11.5 Update 1; contains compiler optimization bugfix
+- A critical bug fix on nogroup_reduction
 - Various bug fixes
 
 * Sun Nov 14 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.3-1

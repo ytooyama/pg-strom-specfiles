@@ -1,4 +1,4 @@
-%define PGSQL_PKGVER	%(echo 13 | sed 's/[^0-9]//g')
+%define PGSQL_PKGVER	%(echo 12| sed 's/[^0-9]//g')
 
 Name: pg_strom-PG%{PGSQL_PKGVER}
 Version: 3.4

@@ -1,6 +1,6 @@
 Name: pg2arrow
 Version: 3.4
-Release: b1%{?dist}
+Release: build1%{?dist}
 Summary: PostgreSQL query results to Apache Arrow conversion tool
 Group: Applications/Databases
 License: PostgreSQL
@@ -11,10 +11,10 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 %description
 pg2arrow is a command line tool to dump PostgreSQL query results
 as Apache Arrow file.
-This package is built from master (commit:cf0a106) of the Git repo.
+This package is built from v3.4 of the Git repo.
 
 %prep
-%setup -q -n pg-strom-master
+%setup -q -n pg-strom-3.4
 
 %build
 %{__make} -C arrow-tools DESTDIR=%{buildroot} PREFIX=/usr pg2arrow
@@ -31,11 +31,17 @@ rm -rf %{buildroot}
 %{_bindir}/pg2arrow
 
 %changelog
-* Tue Nov 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.com> - 3.4b1
+* Thu Dec 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.com> - 3.4-build1
 - test relase
 
-* Sun Nov 28 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.2-2
+* Tue Nov 17 2022 KaiGai Kohei <kaigai@heterodb.com> - 3.4
+- PostgreSQL 14 and 15 supported
+- PostgreSQL 11 is deprecated
+- And Various bug fixes
+
+* Sat Dec 11 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.3-2
 - Rebuild for CUDA11.5 Update 1; contains compiler optimization bugfix
+- A critical bug fix on nogroup_reduction
 - Various bug fixes
 
 * Sun Nov 14 2021 KaiGai Kohei <kaigai@heterodb.com> - 3.3-1
