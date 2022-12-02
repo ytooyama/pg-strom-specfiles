@@ -34,7 +34,7 @@ rm -rf %{buildroot}
 * Thu Dec 1 2022 Tooyama Youhei <ytooyama@users.noreply.github.com> - 3.4-build1
 - test relase
 
-* Tue Nov 17 2022 KaiGai Kohei <kaigai@heterodb.com> - 3.4
+* Thu Nov 17 2022 KaiGai Kohei <kaigai@heterodb.com> - 3.4
 - PostgreSQL 14 and 15 supported
 - PostgreSQL 11 is deprecated
 - And Various bug fixes
