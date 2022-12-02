@@ -22,7 +22,7 @@ specファイルは必要に応じて編集してください。
 SPECS
 `-- pg_strom-PG13.spec
 SOURCES
-|-- pg-strom-master.zip
+|-- pg-strom-3.4.zip
 `-- systemd-pg_strom.conf
 
 # rpmbuild -ba pg_strom-PG13.spec 
