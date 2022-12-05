@@ -18,7 +18,7 @@ Obsoletes: nvme_strom < 2.0
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 AutoReqProv: no
 
-%define __pg_config     /usr/pgsql-13/bin/pg_config
+%define __pg_config     /usr/pgsql-12/bin/pg_config
 %define __pkglibdir     %(%{__pg_config} --pkglibdir)
 %define __pkgbindir     %(%{__pg_config} --bindir)
 %define __pkgsharedir   %(%{__pg_config} --sharedir)
